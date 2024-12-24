@@ -1,0 +1,134 @@
+// work section
+.work-section {
+    .work-heading {
+        .work-heading-color {
+            color: $link-hover-blue;
+        }
+
+        @media (min-width: 1440px) {
+            font-size: 40px;
+        }
+
+        @media (min-width: 1900px) {
+            font-size: 55px;
+        }
+    }
+
+    .work-subheading {
+        color: $text-grey;
+
+        @media (min-width: 768px) {
+            width: 75%;
+        }
+
+        @media (min-width: 1024px) {
+            width: 50%;
+        }
+
+        @media (min-width: 1900px) {
+            font-size: 20px;
+        }
+    }
+
+
+    .work-card-container {
+        .work-card {
+            transition: transform 300ms, box-shadow 300ms, background-color 300ms;
+            max-width: 300px;
+            background-color: inherit;
+
+            &::after {
+                content: "";
+                width: 0;
+                height: 1px;
+                border-radius: 5px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: all 300ms;
+            }
+
+            &.red::after {
+                background-color: $card-hover-red;
+            }
+
+            &.green::after {
+                background-color: $card-hover-green;
+            }
+
+            &.blue::after {
+                background-color: $card-hover-blue;
+            }
+
+            &.purple::after {
+                background-color: $card-hover-purple;
+            }
+
+            &:hover {
+                box-shadow: 0 0.125rem 0.25rem rgba(black, 0.075);
+                transform: scale(1.05);
+                background-color: white;
+
+                .work-border-custom {
+                    width: 100%;
+                }
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
+            .work-image {
+                width: 100px;
+                z-index: 2;
+            }
+
+            .work-card-content {
+                z-index: 2;
+
+                .work-title {
+                    @media (min-width: 1900px) {
+                        font-size: 24px;
+                    }
+                }
+
+                .work-text {
+                    color: $text-dark-grey;
+
+                    @media (min-width: 1900px) {
+                        font-size: 17px;
+                    }
+                }
+            }
+
+            .work-card-number {
+                font-size: 150px;
+                right: 30px;
+                color: $text-light-grey;
+                z-index: 1;
+
+                @media (min-width: 768px) {
+                    right: 45px;
+                }
+
+                @media (min-width: 1024px) {
+                    font-size: 170px;
+                }
+            }
+
+            .work-border-custom {
+                width: 0;
+                height: 1px;
+                transition: all 300ms;
+            }
+        }
+    }
+
+    .work-back-design {
+        width: 50vw;
+
+        @media (min-width: 1440px) {
+            width: 30vw;
+        }
+    }
+}

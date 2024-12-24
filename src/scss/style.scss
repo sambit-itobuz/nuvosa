@@ -1,0 +1,85 @@
+$logo-red: #BC424E;
+$link-hover-blue: #6F77F1;
+$text-black: #212528;
+$text-grey: #727272;
+$text-dark-grey: #828282;
+$button-yellow: #FAD725;
+$button-yellow-hover: #e6c000;
+$light-purple: #DCDDFF;
+$text-light-grey: #FAFAFF;
+$back-grey: #FAFAFA;
+$card-hover-red: #D38094;
+$card-hover-green: #80D3A4;
+$card-hover-blue: #60C2F8;
+$card-hover-purple: #717AE0;
+$text-heading-grey :#666565;
+
+// import sections
+@import 'styles/navbar';
+@import 'styles/hero';
+@import 'styles/expertise';
+@import 'styles/work';
+@import 'styles/solution';
+@import 'styles/utility';
+@import 'styles/reason';
+@import 'styles/need';
+@import 'styles/statistics';
+@import 'styles/speed';
+@import 'styles/plan';
+
+// universal css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+// bootstrap class overwrite 
+.container {
+    @media (min-width: 1450px) {
+        max-width: 1665px;
+    }
+}
+
+// team section
+.team-section {
+
+    .team-card {
+        min-width: 200px;
+
+        .team-card-body {
+            .team-name {
+                font-size: 18px;
+                font-weight: 400;
+
+                &:hover {
+                    color: $link-hover-blue;
+                }
+            }
+
+            .team-position {
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+            .team-list {
+                list-style-type: none;
+
+                img {
+                    &:hover {
+                        filter: invert(56%) sepia(97%) saturate(3097%) hue-rotate(213deg) brightness(93%) contrast(103%);
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1024px) {
+            min-width: 350px;
+        }
+
+        @media (min-width: 1440px) {
+            min-width: unset;
+        }
+    }
+}

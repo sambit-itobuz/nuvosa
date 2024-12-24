@@ -1,0 +1,80 @@
+// solution section 
+.solution-section {
+    background-color: $back-grey;
+
+    .solution-container {
+        max-width: 1100px;
+
+        @media (min-width: 1900px) {
+            max-width: 1300px;
+        }
+
+        .solution-card {
+            background-color: inherit;
+            z-index: 2;
+
+            .solution-heading {
+                font-size: 28px;
+                font-weight: 500;
+
+                @media (min-width: 1024px) {
+                    font-size: 40px;
+                    max-width: 400px;
+                }
+
+                @media (min-width: 1900px) {
+                    font-size: 55px;
+                    max-width: 550px;
+                }
+
+                .solution-heading-color {
+                    color: $link-hover-blue;
+                }
+            }
+
+            .solution-text {
+                color: $text-dark-grey;
+
+                @media (min-width: 1900px) {
+                    font-size: 17px;
+                }
+            }
+
+            .solution-button {
+                background-color: $button-yellow;
+
+                @media (min-width: 1900px) {
+                    font-size: 24px !important;
+                }
+
+                &:hover {
+                    background-color: $button-yellow-hover;
+                }
+            }
+        }
+
+        .solution-image {
+            width: 95vw;
+            max-width: 400px;
+            z-index: 2;
+
+            @media(min-width: 768px) {
+                width: 45vw;
+            }
+
+            @media (min-width: 1900px) {
+                max-width: fit-content;
+            }
+        }
+    }
+
+    .solution-curve1 {
+        top: 80px;
+        z-index: 1;
+    }
+
+    .solution-curve2 {
+        bottom: 80px;
+        z-index: 1;
+    }
+}

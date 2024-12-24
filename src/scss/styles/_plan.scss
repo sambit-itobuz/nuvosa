@@ -1,0 +1,126 @@
+// plan section
+.plan-section {
+    background-color: $back-grey;
+
+    .plan-heading {
+        @media (min-width: 1900px) {
+            font-size: 55px;
+        }
+    }
+
+    .plan-sub-heading {
+        color: $text-dark-grey;
+
+        @media (min-width: 1900px) {
+            font-size: 17px;
+        }
+    }
+
+    .plan-card {
+        transition: all 300ms;
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+
+        &:hover {
+            background-color: #6069EC;
+            color: white;
+            transform: scale(1.05);
+
+            .plan-title {
+                color: white;
+            }
+
+            .plan-list {
+                color: white;
+            }
+
+            .plan-button {
+                border: white 1px solid;
+                color: white;
+            }
+        }
+
+        .plan-title {
+            color: $link-hover-blue;
+        }
+
+        .plan-price {
+            font-size: 40px;
+
+            .doller {
+                font-size: 1rem;
+            }
+
+            .month {
+                font-size: 1rem;
+            }
+        }
+
+        .plan-list {
+            list-style-type: none;
+            color: $text-dark-grey;
+        }
+
+        .plan-button {
+            transition: background-color 300ms;
+            border: black 1px solid;
+
+            &:hover {
+                background-color: $button-yellow;
+                color: black;
+            }
+        }
+
+        .plan-card-body {
+            &::before {
+                content: "";
+                width: 325px;
+                height: 150px;
+                z-index: -1;
+                position: absolute;
+                background-color: #757DF0;
+                border-radius: 5000px;
+                top: 150px;
+                left: -30px;
+                transform: rotate(30deg);
+                visibility: hidden;
+
+                @media (min-width: 1440px) {
+                    width: 375px;
+                    left: -50px;
+                }
+
+                @media (min-width: 1900px) {
+                    width: 425px;
+                    top: 160px;
+                }
+            }
+
+            &:hover::before {
+                visibility: visible;
+            }
+
+            &::after {
+                content: "";
+                width: 500px;
+                height: 230px;
+                z-index: -2;
+                position: absolute;
+                background-color: #6F77F1;
+                top: 0;
+                left: 0;
+                visibility: hidden;
+            }
+
+            &:hover::after {
+                visibility: visible;
+            }
+
+            @media (min-width: 1900px) {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+        }
+    }
+}

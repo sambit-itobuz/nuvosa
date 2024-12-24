@@ -1,0 +1,88 @@
+// speed section
+.speed-section {
+    .speed-image {
+        width: 100%;
+
+        @media (min-width: 768px) {
+            width: 65%;
+        }
+
+        @media (min-width: 1024px) {
+            width: 45%;
+        }
+    }
+
+    .speed-container {
+        .speed-heading {
+            @media (min-width: 1024px) {
+                font-size: 35px;
+            }
+
+            @media (min-width: 1440px) {
+                font-size: 45px;
+            }
+
+            @media (min-width: 1900px) {
+                font-size: 55px;
+            }
+
+            .speed-heading-color {
+                color: $link-hover-blue;
+            }
+        }
+
+        .speed-text {
+            color: $text-dark-grey;
+
+            @media (min-width: 1440px) {
+                width: 85%;
+            }
+
+            @media (min-width: 1900px) {
+                font-size: 17px;
+            }
+        }
+
+        .speed-form {
+            width: 90%;
+
+            .speed-input {
+                background-color: #f2f2f2;
+                width: 100%;
+                border: none;
+
+                @media (min-width: 768px) {
+                    width: 30vw;
+                }
+
+                @media (min-width: 1024px) {
+                    width: 18vw;
+                }
+
+                @media (min-width: 1440px) {
+                    width: 260px;
+                }
+
+                &::placeholder {
+                    color: #b6b6b6;
+                    font-weight: 300;
+                }
+            }
+
+            .input-border {
+                @media (min-width: 768px) {
+                    border-left: 1px solid #dfdfdf;
+                }
+            }
+
+            .form-button {
+                background-color: $button-yellow;
+                transition: background-color 300ms;
+
+                &:hover {
+                    background-color: $button-yellow-hover;
+                }
+            }
+        }
+    }
+}

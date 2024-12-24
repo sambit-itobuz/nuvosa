@@ -1,0 +1,107 @@
+.nav-section {
+    margin-top: 10px;
+
+    @media (min-width: 768px) {
+        margin-top: 30px;
+    }
+
+    @media (min-width: 1900px) {
+        margin-top: 50px;
+    }
+
+    .nav-logo-style {
+        font-size: 32px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin: auto 0;
+        color: $text-black;
+
+        .logo-circle {
+            font-size: 25px;
+            color: $logo-red;
+            margin-top: 6px;
+        }
+    }
+
+    .navbar-item-custom {
+        @media (min-width: 1024px) {
+            margin-left: 10vw;
+        }
+
+        @media (min-width: 1440px) {
+            margin-left: 20vw;
+        }
+
+        .nav-link-custom {
+            font-size: 18px;
+            color: $text-black;
+            font-weight: 300;
+
+            @media (min-width: 1900px) {
+                font-size: 24px;
+            }
+
+            .nav-link-text {
+                &::before {
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    border-radius: 5px;
+                    background-color: $link-hover-blue;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transition: all 300ms;
+                }
+
+                &::after {
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    border-radius: 5px;
+                    background-color: $link-hover-blue;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    transition: all 300ms;
+                }
+
+                &:hover::before {
+                    width: 70%;
+                }
+
+                &:hover::after {
+                    width: 20%;
+                }
+            }
+        }
+    }
+
+    .navbar-button-custom {
+        button {
+            transition: all 300ms;
+            font-size: 18px;
+        }
+
+        .talk-button {
+            border: 1.5px solid $text-black;
+
+            @media (min-width: 1024px) {
+                width: 11vw;
+            }
+
+            @media (min-width: 1900px) {
+                width: 10vw;
+                font-size: 24px;
+            }
+        }
+
+        .search-button {
+            background-color: $button-yellow;
+
+            &:hover {
+                background-color: $button-yellow-hover;
+            }
+        }
+    }
+}

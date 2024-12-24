@@ -1,0 +1,82 @@
+// need section
+.need-section {
+    .need-image {
+        width: 100%;
+
+        @media (min-width: 768px) {
+            width: 65%;
+        }
+
+        @media (min-width: 1024px) {
+            width: 45%;
+        }
+
+        @media (min-width: 1900px) {
+            width: 60%;
+        }
+    }
+
+    .need-content {
+        @media (min-width: 1900px) {
+            margin-left: 150px;
+        }
+
+        .need-heading {
+            .need-heading-color {
+                color: $link-hover-blue;
+            }
+
+            @media (min-width: 1440px) {
+                font-size: 45px;
+            }
+        }
+
+        .need-subheading {
+            color: $text-dark-grey;
+        }
+
+        .need-card-container {
+            @media (min-width: 1400px) {
+                width: 85%;
+                margin-left: 0;
+            }
+
+            .need-card {
+                transition: transform 300ms, box-shadow 300ms;
+
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 .5rem 1rem rgba(black, .15);
+                }
+
+                .need-card-image {
+                    width: 50px;
+
+                    @media (min-width: 1024px) {
+                        width: 65px;
+                    }
+
+                    @media (min-width: 1900px) {
+                        width: 90px;
+                    }
+                }
+
+                .need-card-content {
+                    .need-card-heading {
+                        @media (min-width: 1900px) {
+                            font-size: 23px;
+                        }
+                    }
+
+                    .need-card-text {
+                        color: $text-dark-grey;
+
+                        @media (min-width: 1900px) {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

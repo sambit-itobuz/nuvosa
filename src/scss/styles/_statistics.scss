@@ -1,0 +1,56 @@
+// statistics section 
+.statistics-section {
+    .stat-container {
+        width: 75%;
+        max-width: 1165px;
+
+        .stat {
+            .stat-heading {
+                font-size: 30px;
+                font-weight: 600;
+                color: $text-heading-grey;
+                transition: transform 300ms, color 300ms;
+
+                @media (min-width: 1024px) {
+                    font-size: 50px;
+                }
+
+                @media (min-width: 1900px) {
+                    font-size: 73px;
+                }
+
+                &:hover {
+                    transform: scale(1.025);
+                    color: $text-black;
+                }
+            }
+
+            .stat-text {
+                color: #6f6f6f;
+                font-weight: 300;
+
+                @media (min-width: 1900px) {
+                    font-size: 17px;
+                }
+            }
+        }
+
+        .dot {
+            @media (min-width: 1024px) {
+                font-size: 35px;
+            }
+        }
+
+        .red-dot {
+            color: #d1563b;
+        }
+
+        .green-dot {
+            color: #3BD165;
+        }
+
+        .yellow-dot {
+            color: #F7C745;
+        }
+    }
+}

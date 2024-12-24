@@ -1,0 +1,73 @@
+// reason section
+.reason-section {
+    background-color: $back-grey;
+
+    .reason-heading {
+
+        @media (min-width: 1024px) {
+            font-size: 32px;
+        }
+
+        @media (min-width: 1440px) {
+            font-size: 50px;
+            font-weight: 450;
+        }
+
+        .reason-heading-color {
+            color: $link-hover-blue;
+        }
+    }
+
+    .reason-subheading {
+        color: $text-dark-grey;
+
+        @media (min-width: 768px) {
+            width: 75%;
+            margin: auto;
+        }
+    }
+
+    .reason-card {
+        transition: transform 300ms, box-shadow 300ms;
+        box-shadow: 0 0.125rem 0.25rem rgba(black, 0.075);
+        max-width: 300px;
+
+        @media (min-width: 1900px) {
+            max-width: 370px;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 .5rem 1rem rgba(black, .15);
+        }
+
+        .reason-content {
+            .reason-card-title {
+                @media (min-width: 1024px) {
+                    font-size: 18px;
+                }
+
+                @media (min-width: 1900px) {
+                    font-size: 20px;
+                }
+            }
+
+            .reason-text {
+                color: $text-dark-grey;
+
+                @media (min-width: 1900px) {
+                    font-size: 17px;
+                }
+            }
+
+            .reason-button {
+                background-color: $button-yellow;
+                transition: background-color 300ms;
+
+                &:hover {
+                    background-color: $button-yellow-hover;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+// expertise section
+.expertise-section {
+    .expertise-card {
+        max-width: 380px;
+        transition: transform 300ms;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        .expertise-card-image {
+            width: 60px;
+
+            @media (min-width: 1024px) {
+                width: 80px;
+            }
+
+            @media (min-width: 1900px) {
+                width: 100px;
+            }
+        }
+
+        .expertise-text {
+            color: $text-dark-grey;
+
+            @media (min-width: 1900px) {
+                font-size: 17px;
+            }
+        }
+
+        .expertise-heading {
+            @media (min-width: 768px) {
+                font-size: 1rem;
+            }
+
+            @media (min-width: 1024px) {
+                font-size: 20px;
+                font-weight: 300;
+            }
+
+            @media (min-width: 1440px) {
+                font-size: 25px;
+            }
+
+            @media (min-width: 1900px) {
+                font-size: 38px;
+                line-height: 50px;
+            }
+        }
+
+        @media (min-width: 1900px) {
+            max-width: 450px;
+        }
+    }
+}
