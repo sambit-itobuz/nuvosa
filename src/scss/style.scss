@@ -47,20 +47,28 @@ $text-heading-grey :#666565;
 
     .team-card {
         min-width: 200px;
+        transition: transform 300ms, box-shadow 300ms;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 .5rem 1rem rgba(black, .15);
+
+            .team-name {
+                color: $link-hover-blue;
+            }
+        }
 
         .team-card-body {
             .team-name {
                 font-size: 18px;
                 font-weight: 400;
-
-                &:hover {
-                    color: $link-hover-blue;
-                }
+                transition: color 300ms;
             }
 
             .team-position {
                 font-size: 16px;
                 font-weight: 300;
+                color: $text-dark-grey;
             }
 
             .team-list {
