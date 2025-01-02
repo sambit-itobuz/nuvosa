@@ -1,0 +1,73 @@
+// subscribe
+.subscribe-section {
+    .subscribe-container {
+        background-color: $back-grey;
+
+        @media (min-width: 1024px) {
+            width: 70%;
+        }
+
+        .subscribe-heading {
+            @media (min-width: 1900px) {
+                font-size: 50px;
+            }
+        }
+
+        .subscribe-sub-heading {
+            color: $text-dark-grey;
+
+            @media (min-width: 1900px) {
+                font-size: 20px;
+            }
+        }
+
+        .subscribe-form {
+            @media (min-width: 768px) {
+                width: 75%;
+                min-width: 700px;
+            }
+
+            .subscribe-input {
+                border: 1px solid #C3C6D0;
+
+                &:focus {
+                    outline: none;
+                }
+
+                @media (min-width: 768px) {
+                    width: 32vw;
+                }
+
+                @media (min-width: 1024px) {
+                    width: 25vw;
+                }
+
+                @media (min-width: 1440px) {
+                    width: 21vw;
+                }
+
+                &::placeholder {
+                    color: #b6b6b6;
+                    font-weight: 300;
+                }
+            }
+
+            .subscribe-form-button {
+                width: 100px;
+                background-color: $link-hover-blue;
+                color: white;
+                transition: background-color 300ms, color 300ms, box-shadow 300ms;
+
+                @media (min-width: 768px) {
+                    width: unset;
+                }
+
+                &:hover {
+                    background-color: white;
+                    color: $link-hover-blue;
+                    box-shadow: 0 .5rem 1rem rgba(black, .15);
+                }
+            }
+        }
+    }
+}

@@ -26,6 +26,8 @@ $text-heading-grey :#666565;
 @import 'styles/statistics';
 @import 'styles/speed';
 @import 'styles/plan';
+@import 'styles/team';
+@import 'styles/subscribe';
 
 // universal css
 * {
@@ -42,52 +44,62 @@ $text-heading-grey :#666565;
     }
 }
 
-// team section
-.team-section {
+// footer section
+.footer-section {
+    .nav-logo-style {
+        font-size: 25px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin: auto 0;
+        color: $text-black;
 
-    .team-card {
-        min-width: 200px;
-        transition: transform 300ms, box-shadow 300ms;
-
-        &:hover {
-            transform: scale(1.05);
-            box-shadow: 0 .5rem 1rem rgba(black, .15);
-
-            .team-name {
-                color: $link-hover-blue;
-            }
-        }
-
-        .team-card-body {
-            .team-name {
-                font-size: 18px;
-                font-weight: 400;
-                transition: color 300ms;
-            }
-
-            .team-position {
-                font-size: 16px;
-                font-weight: 300;
-                color: $text-dark-grey;
-            }
-
-            .team-list {
-                list-style-type: none;
-
-                img {
-                    &:hover {
-                        filter: invert(56%) sepia(97%) saturate(3097%) hue-rotate(213deg) brightness(93%) contrast(103%);
-                    }
-                }
-            }
+        @media (min-width: 768px) {
+            font-size: 28px;
         }
 
         @media (min-width: 1024px) {
-            min-width: 350px;
+            font-size: 35px;
         }
 
-        @media (min-width: 1440px) {
-            min-width: unset;
+        @media (min-width: 1900px) {
+            font-size: 45px;
+        }
+
+        .logo-circle {
+            font-size: 18px;
+            color: $logo-red;
+            margin-top: 6px;
+
+            @media (min-width: 768px) {
+                font-size: 20px;
+                margin-top: 7px;
+            }
+
+            @media (min-width: 1024px) {
+                font-size: 24px;
+                margin-top: 10px;
+            }
+
+            @media (min-width: 1900px) {
+                font-size: 32px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .footer-list {
+        list-style-type: none;
+
+        @media (min-width: 1024px) {
+            width: 45%;
+        }
+
+        .footer-list-item {
+
+            .footer-list-link {
+                text-decoration: none;
+                color: black;
+            }
         }
     }
 }
